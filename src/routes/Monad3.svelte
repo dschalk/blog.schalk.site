@@ -63,7 +63,7 @@ B[sym1] = [];
 B[sym2] = [];
 B[sym3] = [];
 
-let Mona = function Mona ( AR = [],  ar = "name" )  {  
+const  Mona = function Mona ( AR = [],  ar = "name" )  {  
   let p, run, f;
   B[ar] = AR.slice();
   return run = (function run (x) {
@@ -261,6 +261,8 @@ function start_2 () {
 <svelte:head>
 	<title>Promises</title>
 </svelte:head>
+
+<h1>JavaScript Functions</h1>
 
 <div style = "font-family: Times New Roman;  text-align: center; color: hsl(210, 90%, 90%); font-size: 38px;" transition:fade>
 PROMISE HANDLING MONADS

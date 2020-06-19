@@ -64,6 +64,7 @@ const  Mona = function Mona ( AR = [],  ar = "name" )  {
 	<title>Basic Monad</title>
 </svelte:head>
 
+<h1>JavaScript Functions</h1>
 <div style = "font-family: Times New Roman;  text-align: center; color: hsl(210, 90%, 90%); font-size: 38px;" transition:fade>
 BASIC MONAD
 </div>
@@ -83,9 +84,11 @@ BASIC MONAD
 <p>Until the last function ("func") in a chain evaluates the return value of the most recent "func(x)", recursion is automatic. The array "ar" grows during each cycle in which func(x) does not return null, NaN, or undefined. Whenever func === "end", ar is returned, but that does not end a chain of computations. As shown below, ar can be used in computations.</p>
 
 <pre>{test}</pre>
+
+<p>Note that both "mon = M([3])" and "mon = M()(()=>3)" have the same effect. They initialize the closure array making "ar === [3]" true.</p>
 <p>Now I think the Promises monad will be easier to understand. It follows the same basic pattern with a new name for "M": Mona() returns run(), and run returns f(). The array that was previously held in "M()" is now stored externally in objects A and B; more precisely, in A[sym1], A[sym2], A[sym3], B[sym1], B[sym2], and B[sym3] where sym1, sym2, and sym3 are symbols. The Promises module features branching and resuming chains and a global lock named "lok" to prevent A and B from clashing. Check it out:</p>
 <a href = http://blog.schalk.site/Monad3>Promises Monad</a> 
 
-<p>Here's some definitions:  </p>
+<p>Here are some definitions:  </p>
 <pre>{cow}</pre>
 

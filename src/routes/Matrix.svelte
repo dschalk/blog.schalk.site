@@ -113,6 +113,7 @@ var html = `<button class = bu  id = 0 on:click = {() => sky([0, ARR[0]] )}>{ARR
 }
 </style>
 
+<h1>JavaScript Functions</h1>
 <div style = "font-family: Times New Roman;  text-align: center; color: hsl(210, 90%, 90%); font-size: 38px;" transition:fade>
 IMMUTABLE ARRAYS PRESERVE PRIOR STATES
 </div>

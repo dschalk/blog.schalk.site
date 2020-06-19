@@ -12,9 +12,12 @@
 	ul {
 		margin: 0;
 		padding: 0;
+		width: 15%;
+		float: left;
+		list-style-type: none;
 	}
-
-	/* clearfix */
+/*
+	// clearfix 
 	ul::after {
 		content: '';
 		display: block;
@@ -25,7 +28,7 @@
 		display: block;
 		float: left;
 	}
-
+*/
 	[aria-current] {
 		position: relative;
 		display: inline-block;
@@ -47,7 +50,6 @@
 		display: block;
 	}
 </style>
-
 <nav>
 	<ul>
 		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>

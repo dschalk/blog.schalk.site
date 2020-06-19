@@ -392,6 +392,7 @@ h2 {text-align: center}
   color: #FFFFAA;
 }
 </style>
+<h1>JavaScript Functions</h1>
 {#if visible}
  <div style = "font-family: Times New Roman;  text-align: center; color: hsl(210, 90%, 90%); font-size: 32px;" transition:fade>
 TRANSDUCER SIMULATION
