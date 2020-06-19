@@ -312,7 +312,7 @@ border-color: #0000AA;
 ASYNCHRONOUS INFORMATION HANDLING I
 </div>
 <br>
-<p> Clicking the button below sends three requests to the Haskell WebSockets server asking for quasi-random integers. As the numbers come in from the server, they are placed in the object named "O" with keys prefixed by "c", and then forwarded to a web worker. The worker returns arrays containing the prime factors of the numbers it recieves. These are placed in "O" with keys prefixed by "d".</p> 
+<p> Clicking the button below sends three requests to the Haskell WebSockets server asking for quasi-random integers. As the numbers come in from the server, they are placed in the object named "O" with keys prefixed by "c", and then forwarded to a web worker. The worker returns arrays containing the prime factors of the numbers it receives. These are placed in "O" with keys prefixed by "d".</p> 
 <br>
 
 <div style = "color: #BBBBFF; font-size: 20px;"> The WebSockets server sent these numbers (now at O.c0, O.c1, and O.c2): </div>
@@ -346,7 +346,7 @@ ASYNCHRONOUS INFORMATION HANDLING I
 
 <pre>{mon}</pre>
 
-<p> Messages are sent to the Haskell WebSockets server requesting pseudo-random numbers between 1 and the integer specified at the end of the request. On the server, randomR from the System.Random library produces a number which is sent to the browser with prefix "BE#$42". Messages from the server are parsed in socket.onmessage. If the prefix is "BE#$42", the payload (a number) is sent to worker_OO, which sends back the number's prime decomposition.</p>
+<p> Messages are sent to the Haskell WebSockets server requesting pseudo-random numbers between 1 and the integer specified at the end of the request. On the server, randomR from the System.Random library produces a number that is sent to the browser with the prefix "BE#$42". Messages from the server are parsed in socket.onmessage. If the prefix is "BE#$42", the payload (a number) is sent to worker_OO, which sends back the number's prime decomposition.</p>
 <pre>{onmessServer}</pre>
 <p> Messages from the web worker are processed in worker_OO.onmessage
 <pre>{onmessWorker}</pre>

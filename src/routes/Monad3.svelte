@@ -63,18 +63,17 @@ B[sym1] = [];
 B[sym2] = [];
 B[sym3] = [];
 
-$: B;
 let Mona = function Mona ( AR = [],  ar = "name" )  {  
   let p, run, f;
   B[ar] = AR.slice();
   return run = (function run (x) {
   if (x instanceof Promise) {x.then(y => {
-    if (!( typeof y === "function" || y == lok || y == NaN || y == undefined ||
-      typeof y == "undefined" || y != y  ) ){B[ar] = B[ar].concat(y)}
-    else if (typeof x !== "function" && x != lok  &&  x != undefined  && x != NaN  && !(x instanceof Promise)) {B[ar] = B[ar].concat(x);
+    if (!( typeof y === "function" || y == lok || y == NaN || 
+        typeof y == "undefined" ))   {B[ar] = B[ar].concat(y)}
+    else if (typeof x !== "function" && x != lok  &&  typeof x !== "undefined"
+       && x != NaN  && !(x instanceof Promise)) {B[ar] = B[ar].concat(x);
   }})}
     f = function f (func) {
-      console.log("B[ar] is", B[ar]);
       if (func === 'halt' || func === 'h' || func == undefined ||
         typeof func == "undefined" || func == NaN ) {
         B[ar] = B[ar]; 
@@ -137,22 +136,18 @@ var lok = false;
 
 function start () {
   if (!lok) {
-    console.log("lok is false -- calling test_3")
     test_3()
   }
   else {
-    console.log("lok is true -- setTimeout 300")
     setTimeout(() => start(),300);
   }
 }
 
 function start_2 () {
   if (!lok) {
-    console.log("lok is false -- calling test_4")
     test_4()
   }
   else {
-    console.log("lok is true -- setTimeout 300")
     setTimeout(() => start_2(),300);
   }
 }
@@ -185,7 +180,6 @@ var code3 = `let Mona = function Mona ( AR = [],  ar = "name" )  {
     else if (typeof x !== "function" && x != lok  &&  x != undefined  && x != NaN  && !(x instanceof Promise)) {B[ar] = B[ar].concat(x);
   }})}
     f = function f (func) {
-      console.log("B[ar] is", B[ar]);
       if (func === 'halt' || func === 'h' || func == undefined ||
         typeof func == "undefined" || func == NaN ) {
         B[ar] = B[ar]; 
@@ -248,22 +242,18 @@ var lok = false;
 
 function start () {
   if (!lok) {
-    console.log("lok is false -- calling test_3")
     test_3()
   }
   else {
-    console.log("lok is true -- setTimeout 300")
     setTimeout(() => start(),300);
   }
 }
 
 function start_2 () {
   if (!lok) {
-    console.log("lok is false -- calling test_4")
     test_4()
   }
   else {
-    console.log("lok is true -- setTimeout 300")
     setTimeout(() => start_2(),300);
   }
 }`
@@ -290,7 +280,7 @@ test_4 ()
 <h3> B[sym3] is {B[sym3]} </h3>
 
 <pre style = "font-size: 18">{code}</pre>
-<p>"A" and "B" are global objects manipulated by the monadPlus function named "Mona". There is no danger of name clashes, race conditions, or anything else untoward because this Svelte-Sapper module is small and unreacheable from other modules. As Mona() changes B[sym1], B[sym2], and B[sym3], the browser display changes accordingly. Here's the dynamic display HTML:</p>
+<p>"A" and "B" are global objects manipulated by the monadPlus function named "Mona". There is no danger of name clashes, race conditions, or anything else untoward because this Svelte-Sapper module is small and unreachable from other modules. As Mona() changes B[sym1], B[sym2], and B[sym3], the browser display changes accordingly. Here's the dynamic display HTML:</p>
 
 <pre style = "font-size: 18">{code2}</pre>
 <p>And here's the code for the functions:</p>
