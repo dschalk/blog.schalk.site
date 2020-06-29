@@ -20,7 +20,7 @@ var end = "end"
 window["<br>"] = "<br>"
 var RESULT = []  
   
-var MI = function MI ()  {  
+var M = function M ()  {  
     var ar = [];
     let res = "";
     var result = [];
@@ -38,21 +38,25 @@ var MI = function MI ()  {
         };
   })(ar.pop());
 }
-var m = MI();
+var m = M();
 m(()=>3)(()=>3)(()=>-36)(()=>4)(()=>4)(()=>4)(()=>1)(()=>1)(()=>-2)
- m(()=>5)(()=>-3)(()=>-54)(()=>5)(()=>10)(()=>-175)(()=>1)(()=>2)(()=>-3)
+m(()=>5)(()=>-3)(()=>-54)(()=>5)(()=>10)(()=>-175)(()=>1)(()=>2)(()=>-3)
      console.log(RESULT) 
- 
+ var code1 = `var m = M();
+m(()=>3)(()=>3)(()=>-36)(()=>4)(()=>4)(()=>4)(()=>1)(()=>1)(()=>-2)
+m(()=>5)(()=>-3)(()=>-54)(()=>5)(()=>10)(()=>-175)(()=>1)(()=>2)(()=>-3)`
+
 </script>
 <svelte:head>
-	<title>Async</title>
+	<title>Quadratic</title>
 </svelte:head>
 
 <h1>JavaScript Functions</h1>
 
 <div style = "font-family: Times New Roman;  text-align: center; color: hsl(210, 90%, 90%); font-size: 38px;" transition:fade>
-PROMISE HANDLING MONADS
+QUADRATIC FORMULA MONAD
 </div>
+<pre>{code1}</pre>
 <br>
 <div>{@html RESULT[0]}</div>
 <div>{@html RESULT[1]}</div>
