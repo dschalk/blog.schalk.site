@@ -21,6 +21,7 @@ for (var j = 0; j < 4; j+=1) {x = k * x; k = k + 1}; x //  479001600
 <div style = "font-family: Times New Roman;  text-align: center; color: hsl(210, 90%, 90%); font-size: 38px;" transition:fade>
 INTRODUCTION
 </div>
+<div style="color:eeffcc">
 <br>
 <p>This website is constructed with the help of Svelte and its companion, Sapper. It is hosted on a Digital Ocean droplet which is supported by a Haskell WebSockets server on a separate droplet. The Svelte code is divided into small modules, small enough to ensure confidence that side effects and mutable shared global variables won't result in name clashes, race conditions, or other unwanted behavior.  </p>
 <h2>Modular Programming With Svelte</h2>
@@ -41,10 +42,10 @@ INTRODUCTION
 <p>TMVars are generally accepted as safe and appropriate for use in critically important applications in which interrupted procedures must not be left hanging, and absolutely have to be completely reversed. Banks that use Haskell for online money transfers don't take chances by making JavaScript perform atomic transactions. All I'm trying to say here is that constantly-evolving shared global state is safe in Haskell and also in JavaScript when appropriate precautions are taken. Small isolated modules here; objects with intricate safeguards in Haskell.</p>
 <p> I created this site to share my enthusiasm for JavaScript functions, and especially for the recursive closures I call "monads".  The previous section, "Modular Programming With Svelte", explains why I have no need for most of the trappings of what people these days call "functional programming". Nor do I care about the many definitions of "monad" that continue to proliferate as developers explore functional programming. </p>
 <p>Trying to make JavaScript functions behave like Haskell functions can be enriching and more entertaining than working crossword puzzles. But when someone is paying you to develop an application, that fun stuff probably needs to chill in the drawer with the Rubik's cube and Shogi board.    </p>
-<p>In the modules that follow, I define functions, experiment with functions, admire the power and possibilities of functions, and obsessively dwell on functions throughout. It seems I must be engaging in "functional programming", at least in the ordinary sense of the words, and in the sense of Greg Michaelson's quote (above).</p>
-<p>Years ago, when I was a criminal defense attorney, I enjoyed seeing a sign on the chief court reporter's desk in a judge's office that read, "You say "bitch" like it's a bad thing." Maybe I will put a sign on my desk saying, "You say I don't adhere to functional programming aficionados' recommended "best practices" like that's a bad thing."  I might make an extra sign for Rich Harris, the inventer of Svelte.  </p>
-<p>Peace, out.  -- David Schalk </p>
-
+<p>                                  
+ </p>
+<p>In the modules that follow, I define functions, experiment with functions, admire the power and possibilities of functions, and obsessively dwell on functions. If to you, "functional JavaScript" means "cargo-cult JavaScript" (supersticiously immitating Haskell), then call my heresy whatever you like. I do hope you will consider the possibility that abandoning strict adherence to the functional paradigm might greatly improve your code.     </p>
+</div>
 <br><br>
 <br><br>
 

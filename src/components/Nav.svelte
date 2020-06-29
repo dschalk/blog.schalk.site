@@ -54,6 +54,7 @@
 	<ul>
 		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
 		<li><a aria-current="{segment === 'Basic' ? 'page' : undefined}" href="Basic">Basic Monad</a></li>
+		<li><a aria-current="{segment === 'Quadratic' ? 'page' : undefined}" href="Quadratic">Quad Monad</a></li>
 		<li><a aria-current="{segment === 'Monad2' ? 'page' : undefined}" href="Monad2">Async</a></li>
 		<li><a aria-current="{segment === 'Monad3' ? 'page' : undefined}" href="Monad3">Promises</a></li>
 		<li><a aria-current="{segment === 'Matrix' ? 'page' : undefined}" href="Matrix">Matrix</a></li>
