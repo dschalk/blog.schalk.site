@@ -262,8 +262,6 @@ function start_2 () {
 	<title>Promises</title>
 </svelte:head>
 
-<h1>JavaScript Functions</h1>
-
 <div style = "font-family: Times New Roman;  text-align: center; color: hsl(210, 90%, 90%); font-size: 38px;" transition:fade>
 PROMISE HANDLING MONADS
 </div>

@@ -392,7 +392,6 @@ h2 {text-align: center}
   color: #FFFFAA;
 }
 </style>
-<h1>JavaScript Functions</h1>
 {#if visible}
  <div style = "font-family: Times New Roman;  text-align: center; color: hsl(210, 90%, 90%); font-size: 32px;" transition:fade>
 TRANSDUCER SIMULATION
@@ -403,7 +402,7 @@ TRANSDUCER SIMULATION
 <p> Transducers provide an ingenious solution to the problem. Any JavaScript developer who hasn't already done so would do well to get a good night's sleep, drink a big cup of coffee, and wrap his or her head around the standard transducer algorithm.</p>
 <p> Another, more straightforward one-array-traversal solution is to use recursive closures, which I'll shorten to "monads". This post shows the result of an array being traversed only one time and, with the help of a monad, undergoing multiple transformations by a collection of functions. The result is the same result obtained by the dot method and a standard transducer.</p>
 <p>The tricky part is including "filter" in the mix. Composing map() with itself is trivial but composing map and filter in a chain of computations is something else. </p>
-<div>The modified Monad (below) could benefit from some refactoring, but it does what needs to be done for this demo. The point is that a standard transducer and Monad (as defined in this module) both traverse the array only once to accomplish what the built-in dot method does by traversing the original array and seven intermediary arrays. </div>
+<div>The "monad" defined below traverses the array only once to accomplish what the built-in dot method does by traversing the original array -- then seven intermediary arrays -- before arriving at the result. But don't forget, traditional transducers and JavaScript's built-in dot method are both faster than this monad.  so this module does little more than demo </div>
 <pre>{mon44}</pre>
 <p> On my desktop computer, when ar74.length === 100,000 I got this and similar results: </p>
 <div style = "color: #BBFFBB">ar74.length = 100,000:</div>

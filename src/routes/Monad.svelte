@@ -65,7 +65,7 @@ const  Mona = function Mona ( AR = [],  ar = "name" )  {
 </svelte:head>
 
 <div style = "font-family: Times New Roman;  text-align: center; color: hsl(210, 90%, 90%); font-size: 38px;" transition:fade>
-FUNCTION MONADS
+BASIC MONAD
 </div>
 <br>
 <div class = tai>In functional programming, a monad is a design pattern[1] that allows structuring programs generically while automating away boilerplate code needed by the program logic. Monads achieve this by providing their own data type (a particular type for each type of monad), which represents a specific form of computation, along with one procedure to wrap values of any basic type within the monad (yielding a monadic value) and another to compose functions that output monadic values (called monadic functions).</div>

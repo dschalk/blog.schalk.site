@@ -458,5 +458,5 @@ Transducer: 176 </pre>
 <p> And here's some of the code behind the transducer demonstration: </p>
 <pre>{call2}</pre>
 <span> The rest of the code can be found in the </span>
-<a href = "https://github.com/dschalk/blog">Github repository</a>
+<a href = "https://github.com/dschalk/blog.schalk.site">Github repository</a>
 <span>.</span>

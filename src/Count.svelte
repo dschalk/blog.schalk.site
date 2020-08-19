@@ -1,7 +1,7 @@
 <script>
     import { count, lock, light, jay, zebra } from './store.js';
     import { writable } from 'svelte/store';
-    console.log("In Count.svelte -- writable(false) is ", writable(false));
+    console.log("In Count.svelte -- writable(false) is ", writable(false))
     console.log("$count is ", $count)
 
     console.log("$lock is ", $lock)
