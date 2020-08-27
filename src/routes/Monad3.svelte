@@ -262,8 +262,8 @@ function start_2 () {
 	<title>Promises</title>
 </svelte:head>
 
-<div style = "font-family: Times New Roman;  text-align: center; color: hsl(210, 90%, 90%); font-size: 38px;" transition:fade>
-PROMISE HANDLING MONADS
+<div style = "font-family: Times New Roman;  text-align: center; color: #0000AA; font-size: 38px;" transition:fade>
+Promise Handling Monads
 </div>
 <p>If you click the buttons  (below) more than once, in any order, each routine will finish and then start over with the next function in the queue.</p>
 <button style = "text-align: left" on:click = {start}>  

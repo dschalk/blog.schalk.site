@@ -383,19 +383,24 @@ increase();
 decrease();
   </script>
 <style>
-h2 {text-align: center}
-.p {
-  color: #FFAAAA;;
-  font-size: 20px;
-}
 .q {
-  color: #FFFFAA;
+  color: #CC0000;
+}
+
+.p {
+  color: #994400;
+  font-size: 26px;
+}
+
+pre {
+    font-size: 20px;
 }
 </style>
 {#if visible}
- <div style = "font-family: Times New Roman;  text-align: center; color: hsl(210, 90%, 90%); font-size: 32px;" transition:fade>
-TRANSDUCER SIMULATION
- </div>
+<div style = "font-family: Times New Roman;  text-align: center; 
+color: #0000AA; font-size: 38px;" transition:fade>
+Transducer Simulation
+</div>>
 {/if}
 
 <p> The traditional JavaScript method of composing functions using mainly map, filter, and reduce dot notation (eg. "array.map(func1).filter(func2).map(func3)") pollutes memory with arrays that are used only to compute the next array in a chain. Moreover, each of the soon-to-be useless arrays must be traversed. When arrays are large and numerous functions are involved, this can be a performance bottleneck.</p>
@@ -405,7 +410,7 @@ TRANSDUCER SIMULATION
 <div>The "monad" defined below traverses the array only once to accomplish what the built-in dot method does by traversing the original array -- then seven intermediary arrays -- before arriving at the result. But don't forget, traditional transducers and JavaScript's built-in dot method are both faster than this monad.  so this module does little more than demo </div>
 <pre>{mon44}</pre>
 <p> On my desktop computer, when ar74.length === 100,000 I got this and similar results: </p>
-<div style = "color: #BBFFBB">ar74.length = 100,000:</div>
+<div style = "color: darkred">ar74.length = 100,000:</div>
 
 <pre>Dot method:: 25 ms
 Monad two traversals: 255 ms
@@ -413,7 +418,7 @@ Monad one traversal: 220 ms
 Transducer: 26 ms </pre>
 <p> ar74.length === 1,000,000 was about as far as I could go without crashing the browser. Here are two typical results: </p>
 
-<div style = "color: #BBFFBB">Two runs with ar74.length = 1,000,000:</div>
+<div style = "color: #CC0000">Two runs with ar74.length = 1,000,000:</div>
 
 <pre>Dot method:: 276
 Monad two traversals: 2140
@@ -432,17 +437,17 @@ Transducer: 176 </pre>
 <br><br>
 <div>Result length is {transducerResult.length}</div>
 <br><br>
-<div class = p> Traditional dot composition </div>
+<div class = p> Traditional dot composition: </div>
 <br>
 <div class = q >[{A_A.join(", ")}]</div>
 <br>
 <br>
-<div class = p> Composition in two stages using Monad </div>
+<div class = p> Composition in two stages using Monad: </div>
 <br>
 <div class = q > [{B_B.join(", ")}]</div>
 <br>
 <br>
-<div class = p> Composition in one traversal using Monad </div>
+<div class = p> Composition in one traversal using Monad: </div>
 <br>
 <div class = q > [{C_C.join(", ")}]</div>
 <br>

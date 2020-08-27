@@ -1,6 +1,13 @@
 <script>
 import {fade} from "svelte/transition"
-var monad = `function M (defaultArg = [])  {  
+var cube = x => x**3; 
+var double = x => x + x;
+var div = x => y => y / x;
+var mult = x => y => x * y;
+var pow = x => n => x**n;
+var add = x => y => x + y
+var e = "end";
+function M (defaultArg = [])  {  
     var ar = defaultArg.slice(); // clones the argument
     return (function run (x) {
         if (typeof x !== "undefined") ar.push(x); 
@@ -9,10 +16,39 @@ var monad = `function M (defaultArg = [])  {
             else return run(func(x));
         };
     })(ar.pop());
-}`
+}
 
-var test = `mon = M();
+var mon = M();
 
+mon(()=>3)(x=>x*x*x)(x=>x*x)(x=>x/mon("end")[0]**2)
+(Math.sqrt)(x=>mon("end")[1]+x)(x=>x+2*mon("end")[0])(e)  // 42`
+
+
+
+var v1 = M([3])(cube)(double)(add(-12));
+console.log("v1(e) is", v1(e));
+v1(add(-38))(cube)
+console.log("v1(e) is", v1(e))
+
+
+
+var monad1 = `function M (initialArray = [])  { // The default is the empty array.
+    var ar = initialArray.slice(); // Clones the argument for subsequent manipulation.`
+var monad2 = `    return (function run (x) {
+        if (typeof x !== "undefined") ar.push(x); // Other tests can be applied here.
+        // Additional code for handling x. ` 
+var monad3 = `        return function f (func) { // Continues while composed "func" values are consumed.
+            if (func === "end") return ar.slice(); // Return a clone of ar.
+            //  "else if" clauses for handling func can be added.
+            else return run(func(x)); // run will determine the fate of func(x).
+        }; `
+var monad4 = `    })(ar.pop()); // The popped value is often replaced in run().`
+var monad5 = `}; `
+
+var test = `mon = M();`
+
+var comp = `let result = M([a])(func1)(func2)(func3)("end")`
+var end = `result = [func1(a), func2(func1(a)), func3(func2(func1(a)))]`
 var result = mon(()=>3)(x=>x*x*x)(x=>x*x)(x=>x/mon("end")[0]**2)
 (Math.sqrt)(x=>mon("end")[1]+x)(x=>x+2*mon("end")[0])("end")
 
@@ -54,31 +90,30 @@ const  Mona = function Mona ( AR = [],  ar = "name" )  {
 </script>
 
 <style>
-  .tao {text-indent: 3%;}
-  .tai {text-indent: 3%; font-style: italic; color: #EFE}
-  h2 {text-align: center;}
+pre {font-size: 18px;}
+span {font-size: 18px;}
 </style>
 
 <svelte:head>
-	<title>Basic Monad</title>
+	<title>Inner Functions Monad</title>
 </svelte:head>
 
-<div style = "font-family: Times New Roman;  text-align: center; color: hsl(210, 90%, 90%); font-size: 38px;" transition:fade>
-BASIC MONAD
+<div style = "font-family: Times New Roman;  text-align: center; color: #0000FF; font-size: 38px;" transition:fade>
+Function Monads
 </div>
 <br>
-<div class = tai>In functional programming, a monad is a design pattern[1] that allows structuring programs generically while automating away boilerplate code needed by the program logic. Monads achieve this by providing their own data type (a particular type for each type of monad), which represents a specific form of computation, along with one procedure to wrap values of any basic type within the monad (yielding a monadic value) and another to compose functions that output monadic values (called monadic functions).</div>
-<br>
 
-<div class = tai>This allows monads to simplify a wide range of problems, like handling potential undefined values (with the Maybe monad), or keeping values within a flexible, well-formed list (using the List monad). With a monad, a programmer can turn a complicated sequence of functions into a succinct pipeline that abstracts away auxiliary data management, control flow, or side-effects. </div>
-<span> -- https://en.wikipedia.org/wiki/Monad_(functional_programming)</span>
+<p>Here's the pattern we will use for function-based monads:</p>
+<pre style = "color: #0000FF">{monad1}</pre>
+<pre style = "color: #F00000">{monad2}</pre>
+<pre style = "color: #FF00FF">{monad3}</pre>
+<pre style = "color: #F00000">{monad4}</pre>
+<pre style = "color: #0000FF">{monad5}</pre>
 
-<p>That is spot on with respect to the Haskell programming language; and to a large extent, it describes the monads I'll define in this module. The main difference concerns the pattern described in the second sentence of of the first paragraph: "Monads achieve this by providing their own data type . . .". </p>
-<p>Forcing JavaScript to adhere to strict typing rules probably helps large development teams speed up the process of getting large, complicated applications into production. It might also be soothing to people who feel secure in highly structured environments. But here, in this application, insisting on data types and having monads "lift" from one type to another would entail overhead while providing little or no value. </p>
-<p>That doesn't mean there is a dearth of variety. As you will see in later modules, there's a monad that handles data from a WebSocket server and a Web Worker, one that handles Promises, another that serves as a transducer, and so on.  </p>
-<p>Here's a basic design pattern; it's the definition of a very simple monad:</p>
-<pre>{monad}</pre>
-<p>"M()" returns "run()" which returns "f". M() holds the array ("ar") that can be augmented and manipulated by run(). If run() returns f() in front of a function, f()'s argument "func" (normally a function) is applied to run()'s argument, which is the return value of the previous "func" applied to the previous value of "x".</p>
+<p>"M()" returns "run()" which returns "f". M() holds the array ("ar"). As you see, ar is available to run() and f(). </p>
+<p>The first time run() executes, its argument is ar.pop(), the last element in ar. At this point, "x" in run(x) is ar.pop(). If ar.pop() passes the tests in run, it is returned to the end of ar. </p>
+<p>run() returns f(). If a value "func" is in front of f(), and func is a function,  run is called in func(x) where "x" is the current argument of run(). Otherwise, func === "end" and ar is returned. If nothing is in front of the returned value f(), f() remains ready to execute whenever an argument is provided to it.</p>  
+<p>run() returns f(). If there is a value "func" in front of f(), f(func) executes, returning run(f()) and run() is called again, this time on func() on ent "func" (normally a function) is applied to run()'s argument, which is the return value of the previous "func" applied to the previous value of "x".</p>
 <p>Until the last function ("func") in a chain evaluates the return value of the most recent "func(x)", recursion is automatic. The array "ar" grows during each cycle in which func(x) does not return null, NaN, or undefined. Whenever func === "end", ar is returned, but that does not end a chain of computations. As shown below, ar can be used in computations.</p>
 
 <pre>{test}</pre>

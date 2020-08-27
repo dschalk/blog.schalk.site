@@ -52,9 +52,10 @@ RESULT.length = 6;`
 	<title>Quadratic</title>
 </svelte:head>
 
-<div style = "font-family: Times New Roman;  text-align: center; color: hsl(210, 90%, 90%); font-size: 38px;" transition:fade>
-QUADRATIC FORMULA MONAD
-</div>
+<div style = "font-family: Times New Roman;  text-align: center; 
+color: #0000AA; font-size: 38px;" transition:fade>
+Quadratic Formula
+</div>>
 <h2>Functional Programming Paradigm Ignored</h2>
 
  <p>Some Haskell programmers behave like dour monks in an austere monistary, always ready to downvote advice that deviates from Haskell's "no side effects, no mutations" ethos. Some fanatical functional JavaScript coders won't even mutate variables confined entirely to function scope. If they lighten up and pay attention, they might learn something. </p>

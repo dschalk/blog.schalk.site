@@ -12,22 +12,25 @@ $: num = 0;
 </script>
 
 <style>
-	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-
-		padding: 0 1em;
-	}
+  
+nav {
+  position: fixed;
+  top: 25;
+  left: 30;
+  width: 20%;
+  padding: 0 1em;
+}
 
 	ul {
 		margin: 0;
 		padding: 0;
-		width: 12%;
+		width: 80%;
 		float: left;
 		list-style-type: none;
+		font-size: 18px;
 	}
-/*
-	// clearfix 
-	ul::after {
+
+   	ul::after {
 		content: '';
 		display: block;
 		clear: both;
@@ -37,7 +40,7 @@ $: num = 0;
 		display: block;
 		float: left;
 	}
-*/
+
 	[aria-current] {
 		position: relative;
 		display: inline-block;
@@ -53,29 +56,36 @@ $: num = 0;
 		bottom: -1px;
 	}
 
-	a {
-		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
-	}
 </style>
-<h1 style = "color: #5AFFFF; font-style: normal">SENSIBLE FUNCTIONAL JAVASCRIPT</h1>
+<br><br><br>
+<h1 style = "color: #000099; font-style: normal; font-family: times; font-size: 52px">SENSIBLE FUNCTIONAL JAVASCRIPT</h1>
 <nav>
 	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'Basic' ? 'page' : undefined}" href="Basic">Function Monads</a></li>
-		<li><a aria-current="{segment === 'Basic_II' ? 'page' : undefined}" href="Basic_II">Cowzer McScowzer</a></li>
-		<li><a aria-current="{segment === 'Quadratic' ? 'page' : undefined}" href="Quadratic">Quad Monad</a></li>
-		<li><a aria-current="{segment === 'Monad2' ? 'page' : undefined}" href="Monad2">Async</a></li>
+		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">Home</a></li>
+		<br>
+		<br>
 		<li><a aria-current="{segment === 'ObjectMonad' ? 'page' : undefined}" href="ObjectMonad">Object Monad</a></li>
+		<br>
+		<br>
+		<li><a aria-current="{segment === 'FunctionMonad' ? 'page' : undefined}" href="FunctionMonad">Function Monads</a></li>
+		<br>
+		<br>
+		<li><a aria-current="{segment === 'Monad2' ? 'page' : undefined}" href="Monad2">Async</a></li>
+		<br>
+		<br>
 		<li><a aria-current="{segment === 'Monad3' ? 'page' : undefined}" href="Monad3">Promises</a></li>
-		<li><a aria-current="{segment === 'Matrix' ? 'page' : undefined}" href="Matrix">Matrix</a></li>
+		<br>
+		<br>
 		<li><a aria-current="{segment === 'Transducer' ? 'page' : undefined}" href="Transducer">Transducer</a></li>
-		<li><a aria-current="{segment === 'Experiment' ? 'page' : undefined}" href="Experiment">Experiment</a></li>
+		<br>
+		<br>
+		<li><a aria-current="{segment === 'Matrix' ? 'page' : undefined}" href="Matrix">Matrix</a></li>
+		<br>
+		<br>
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
+		     the blog data when we hover over the link or tap it on a touchscreen 
+		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">Sapper Blog</a></li> -->
 	</ul>
 </nav>
 

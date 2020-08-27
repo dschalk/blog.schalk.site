@@ -217,7 +217,7 @@ if (M === 2) {
 }
 }
 
-var mon = `const  Monad =function Monad ( AR = [],  name = "generic" )  {
+var mon = `function Monad ( AR = [],  name = "generic" )  {
     var x = AR.pop(); // x will be replaced in the function "run" (below)
     O[name] = AR;
     var s = "stop";
@@ -283,64 +283,59 @@ console.log ("O is", O);
 </script>
 
 <style>
+
 button {
-margin-left: 5%i;
-background-color: #004400;
-border-width: 2px;
-border-color: #E8F7C1;
-border-radius: 70px;
-text-decoration-color: red;
-font-size: 20px;
--webkit-box-shadow: 0px 0px 15px 0px rgb(255, 215, 0);
-box-shadow:         0px 0px 15px 0px rgb(255, 215, 0);
-padding: 3px 10px 3px 10px;
-}
+    margin-left: 5%;
+    background-color: #CCffff;
+    border-width: 0px;
+    border-color: #361B01;
+    border-radius: 25px;
+    color: darkblue;
+    font-size: 24px;
+    box-shadow: 0px 0px 12px 0px rgb(0, 255, 0);
+    padding: 3px 10px 3px 10px;
+  }
 
-button:hover {
-background-color: #0000CC;
-padding: 3px 10px 3px 10px;
-text-decoration-color: yellow;
-border-color: #0000AA;
-}
+  button:hover {
+    box-shadow: 0px 0px 12px 0px rgb(0,0,255);
+    color: #0000FF;
+    font-size: 22px;
+    background-color: gold ;
+    border-color: #0000AA;
+  }
 
+pre {font-size: 20px}
 </style>
 <svelte:head>
 	<title>Async</title>
 </svelte:head>
 
-<div style = "font-family: Times New Roman;  text-align: center; color: hsl(210, 90%, 90%); font-size: 38px;" transition:fade>
-ASYNCHRONOUS INFORMATION HANDLING I
+<div style = "font-family: Times New Roman;  text-align: center; 
+color: #0000AA; font-size: 38px;" transition:fade>
+Asynchronous Information Handling
 </div>
 <br>
 <p> Clicking the button below sends three requests to the Haskell WebSockets server asking for quasi-random integers. As the numbers come in from the server, they are placed in the object named "O" with keys prefixed by "c", and then forwarded to a web worker. The worker returns arrays containing the prime factors of the numbers it receives. These are placed in "O" with keys prefixed by "d".</p> 
-<br>
 
-<div style = "color: #BBBBFF; font-size: 20px;"> The WebSockets server sent these numbers (now at O.c0, O.c1, and O.c2): </div>
-<div style = "color: #FFFFCD; font-size: 20px; ">
+<p> The WebSockets server sent these numbers (now at O.c0, O.c1, and O.c2): </p>
+<p style="color:red">
 {O.c0}, {O.c1}, and {O.c2}  
+<p>
+<p> The web worker sent these arrays of prime factors (now at O.d0, O.d1, and O.d2): </p>
+<div style="color:red">
+<p>[{O.d0.join(', ')}] </p><p> [{O.d1.join(', ')}]</p> <p> [{O.d2.join(', ')}<p>
 </div>
-<br>
-<span style = "color: #CDCDFF; font-size: 20px;"> The web worker sent these arrays of prime factors (now at O.d0, O.d1, and O.d2): </span>
-<span style = "color: #FFFFCD; font-size: 20px;">
-<br> [{O.d0.join(', ')}] <br> [{O.d1.join(', ')}] <br> [{O.d2.join(', ')}]</span>;
-<br>
-<br>
 <button on:click = {factors}>
 <pre>{candle}</pre>
-
 </button>
 <br><br><br>
 
-<div style = "color: #FFFFCD; font-size: 20px;">
 [{O.d0}].reduce((a,b) => a*b) === {O.c0}: <span style = "font-size:24px; color:#FF0B0B" >{O.d0.reduce((a,b) => a*b) == O.c0}</span>
 <br>
 [{O.d1}].reduce((a,b) => a*b) === {O.c1}: <span style = "font-size:24px; color:#FF0B0B" >{O.d1.reduce((a,b) => a*b) == O.c1}</span>
 <br>
 [{O.d2}].reduce((a,b) => a*b) ==  = {O.c2}: <span style = "font-size:24px; color:#FF0B0B" >{O.d2.reduce((a,b) => a*b) == O.c2}</span>
 <br>
-
-
-</div>
 
 <p> In this demonstration, each monad's array of computed values is preserved as an attribute of an object named O. Here's the definition of "Monad" used in this module:</p>
 

@@ -113,10 +113,11 @@ var html = `<button class = bu  id = 0 on:click = {() => sky([0, ARR[0]] )}>{ARR
 }
 </style>
 
-<div style = "font-family: Times New Roman;  text-align: center; color: hsl(210, 90%, 90%); font-size: 38px;" transition:fade>
-IMMUTABLE ARRAYS PRESERVE PRIOR STATES
+<div style = "font-family: Times New Roman;  text-align: center; color: #0000AA; font-size: 38px;" transition:fade>
+Immutable Data Structures Are Sometimes Useful
 </div>
 <br><br>
+<p>Click any two numbers below and they will change places. The BACK and FORWARD buttons traverse the history of those changes. </p>
 <div>index: {index}</div>
 <div>ARR: {ARR}</div>
 <div>ARCHIVE: {ARCHIVE}</div>
