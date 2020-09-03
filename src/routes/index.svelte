@@ -82,7 +82,6 @@ console.log("v1(e) is", v1(e));  // [3, 27, 54, 42, 4, 64] `
   .tao {margin-left: 3%;}
   em {color: darkgreen;}
 
-
 a {
   color: rgb(70, 0, 128);
 }

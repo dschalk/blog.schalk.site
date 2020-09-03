@@ -54,9 +54,7 @@ const  Mona = function Mona ( AR = [],  ar = "name" )  {
 </script>
 
 <style>
-  .tao {text-indent: 3%;}
-  .tai {text-indent: 3%; font-style: italic; color: #EFE}
-  h2 {text-align: center;}
+
 </style>
 
 <svelte:head>

@@ -118,24 +118,15 @@ var lock = false;
 
 O.generic = ["Nobody"];
 
-const  Monad =function Monad ( AR = [],  name = "generic" )  {
-var x = AR.pop();
-O[name] = AR;
-var s = "stop";
- (function run (xx) {
-if (typeof xx != "undefined"  && xx === xx  && xx !== false && xx.name !== "f_" && xx.name !== "stop" )  {
-  O[name] = O[name].concat(xx)
+const  Monad =function Monad ( arr = [])  {
+    var ar = arr.slice();
+    function run (func) {
+        let x = ar[ar.length - 1];
+        if (typeof func === "function") ar.push(func(x))
+        else if ( x instanceof Promise) x.then(v => ar.push(func(v)));
+        return run;
+    }
 };
-var  f_ = function f_ (func) {
-    if (func === 'stop'  || func === 's') return O[name]
-    else if (typeof func !== "function") p = func(x)
-    else if (x instanceof Promise) p = x.then(v => func(v));
-    return run(p);
-  }
-  return f_;
-}) (x);
-} 
-
 
 var cow = Monad([], "cow")
 console.log("cow is", cow);
@@ -170,9 +161,9 @@ if (socket.readyState === 1) {
   var combo = v + '<o>' + v2;
   socket.send('CC#$42' + combo);
   // socket.send(`GZ#$42,solo,${v}`);
-  socket.send("BE#$42,solo,name,10000")
+  /*socket.send("BE#$42,solo,name,10000")
   socket.send("BE#$42,solo,name,100000")
-  socket.send("BE#$42,solo,name,1000")
+  socket.send("BE#$42,solo,name,1000") */
 } else {
   login();
 }

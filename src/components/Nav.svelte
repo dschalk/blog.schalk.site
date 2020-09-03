@@ -4,10 +4,13 @@ var ARR;
 var jack;
 var AR = [];
 
+// var socket = new WebSocket("ws://167.71.168.53:3055");
+
 var ARR = AR.map(v => "color: #" + v)
 $: ARR;
 $: num = 0;
 // setInterval(function () {jack = (num ++)%130; jack = jack}, 3)
+
 
 </script>
 
@@ -37,8 +40,8 @@ nav {
 	}
 
 	li {
-		display: block;
-		float: left;
+		display: inline;
+		float: top;
 	}
 
 	[aria-current] {
@@ -65,9 +68,6 @@ nav {
 		<br>
 		<br>
 		<li><a aria-current="{segment === 'ObjectMonad' ? 'page' : undefined}" href="ObjectMonad">Object Monad</a></li>
-		<br>
-		<br>
-		<li><a aria-current="{segment === 'FunctionMonad' ? 'page' : undefined}" href="FunctionMonad">Function Monads</a></li>
 		<br>
 		<br>
 		<li><a aria-current="{segment === 'Monad2' ? 'page' : undefined}" href="Monad2">Async</a></li>
