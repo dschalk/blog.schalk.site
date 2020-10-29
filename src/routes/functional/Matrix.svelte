@@ -110,12 +110,22 @@ var html = `<button class = bu  id = 0 on:click = {() => sky([0, ARR[0]] )}>{ARR
 <style>
 .bu {
     width: 50px;
+    border-width: 0;
+    color: #CC00CC;
+    font-size: 30px;
+    background-color: white;
+}
+
+h2 {
+    color: purple;
+    text-align: center;
 }
 </style>
 
 <div style = "font-family: Times New Roman;  text-align: center; color: #0000AA; font-size: 38px;" transition:fade>
-Immutable Data Structures Are Sometimes Useful
+Immutable Data Structures
 </div>
+<h2>Preserving records of historical state</h2>
 <br><br>
 <p>Click any two numbers below and they will change places. The BACK and FORWARD buttons traverse the history of those changes. </p>
 <div>index: {index}</div>
@@ -123,6 +133,7 @@ Immutable Data Structures Are Sometimes Useful
 <div>ARCHIVE: {ARCHIVE}</div>
 
 <br><br>
+<div style = "color: #FF0000; text-align: center">
 <button class = bu  id = 0 on:click = {() => sky([0, ARR[0]] )}>{ARR[0]}</button>
 <button class = bu  id = 1 on:click = {() => sky([1, ARR[1]] )}>{ARR[1]}</button>
 <button class = bu  id = 2 on:click = {() => sky([2, ARR[2]] )}>{ARR[2]}</button>
@@ -144,8 +155,8 @@ Immutable Data Structures Are Sometimes Useful
 <button on:click = {back}>BACK</button>
 <button on:click = {forward}>FORWARD</button>
 <br><br><br>
-
-<p>Here are the variable and function definitions:</p>
+</div>
+<p>Here's the code:</p>
 <pre>{code}</pre>
 <p>And here's some of the HTML:</p>
 <pre>{html}</pre>

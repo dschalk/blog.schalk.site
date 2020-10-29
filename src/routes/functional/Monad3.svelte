@@ -273,7 +273,7 @@ test_3 ()
 <button style = "text-align: left" on:click = {start_2}>  
 test_4 ()
 </button>
-
+<br><br>
 <h3>lok is {lok}</h3>
 <h3> B[sym1] is {B[sym1]} </h3>
 <h3> B[sym2] is {B[sym2]} </h3>

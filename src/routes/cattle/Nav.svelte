@@ -50,13 +50,13 @@
 
 <nav>
 	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
+		<li><a aria-current="{segment === 'undefined' ? 'page' : undefined}" href="cattle/">home</a></li>
+		<li><a aria-current="{segment === 'cattle/cow1' ? 'page' : undefined}" href="cattle/cow1">cow1</a></li>
+		<li><a aria-current="{segment === 'cattle/cow2' ? 'page' : undefined}" href="cattle/cow2">cow2</a></li>
+		<li><a aria-current="{segment === 'cattle/cow3' ? 'page' : undefined}" href="cattle/cow3">cow3</a></li>
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
-		<li><a rel=prefetch aria-current="{segment === 'cattle' ? 'page' : undefined}" href="cattle">cattle</a></li>
-		<li><a rel=prefetch aria-current="{segment === 'functional' ? 'page' : undefined}" href="functional">Functional JavaScript</a></li>
+
 	</ul>
 </nav>

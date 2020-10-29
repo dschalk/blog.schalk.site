@@ -50,13 +50,13 @@
 
 <nav>
 	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
+		<li><a aria-current="{segment === 'functional/' ? 'page' : undefined}" href="functional/">home</a></li>
+		<li><a aria-current="{segment === 'functional/Monad2' ? 'page' : undefined}" href="functional/Monad2">Async</a></li>
+		<li><a aria-current="{segment === 'functional/Monad3' ? 'page' : undefined}" href="functional/Monad3">Promises</a></li>
+		<li><a aria-current="{segment === 'functional/Matrix' ? 'page' : undefined}" href="functional/Matrix">Grid</a></li>
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
-		<li><a rel=prefetch aria-current="{segment === 'cattle' ? 'page' : undefined}" href="cattle">cattle</a></li>
-		<li><a rel=prefetch aria-current="{segment === 'functional' ? 'page' : undefined}" href="functional">Functional JavaScript</a></li>
+
 	</ul>
 </nav>

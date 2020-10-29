@@ -42,7 +42,9 @@ var g = x => {
 }
 
 onmessage = function(m) {
-  console.log("worker OO duck")
-  var a = m.data;
-  postMessage(g(a));
+  var a = m.data;    
+  let xx = [a, g(a)];
+  console.log("worker OO duck", a,  xx)
+  console.log(`worker_OO is now posting ${xx}.`);
+  postMessage(xx);
 } 
