@@ -24,14 +24,19 @@ O.b0 = O.b1 = O.b2 = [3,3,3,3];
 O.c0 = O.c1 = O.c2 = [2,4,6,8];
 O.d0 = O.d1 = O.d2 = [2,2,2,2,2,2];
 
-function Monad (f,g) {
+function Monad () {
     var N1 = -1;
     var N2 = -1;
     var N3 = -1;
     var ax = "start";
     var bx = 0;
     function run (aa, bb) {
-        if (aa === "b") {N1 = N1 + 1; let v = (aa + N1); O[v] = bb}
+        if (aa === "b") {
+          N1 = N1 + 1; 
+          let v = (aa + N1); 
+          O[v] = bb
+          console.log("************************O[v] is **********************",  O[v])
+          }
         if (aa === "c") {
             N2 = N2 + 1; 
             let v = aa + N2.toString(); 
@@ -45,14 +50,48 @@ function Monad (f,g) {
         return function f (s,t) {
             ax = s;
             bx = t;
-            console.log("aa and bb are", aa, bb)
             return run(ax, bx)
         }
     }
-    return run(f,g)
+    return run(ax, bx);
 }
 
-var mon =  Monad(("start", 0))
+var mon =  Monad()
+
+var car = `
+function Monad () {
+    var N1 = -1;
+    var N2 = -1;
+    var N3 = -1;
+    var ax = "start";
+    var bx = 0;
+    function run (aa, bb) {
+        if (aa === "b") {
+          N1 = N1 + 1; 
+          let v = (aa + N1); 
+          O[v] = bb
+          console.log("************************O[v] is **********************",  O[v])
+          }
+        if (aa === "c") {
+            N2 = N2 + 1; 
+            let v = aa + N2.toString(); 
+            O[v] = bb;
+            worker_OO.postMessage(bb);
+        }
+        if (aa === "d") {N3 = N3 + 1; let v = aa + N3; O[v] = bb}
+        if (N1 === 2) N1 = -1;
+        if (N2 === 2) N2 = -1;
+        if (N3 === 2) N3 = -1;
+        return function f (s,t) {
+            ax = s;
+            bx = t;
+            return run(ax, bx)
+        }
+    }
+    return run(ax, bx);
+}
+
+var mon =  Monad()`
 
 onMount ( () => {     //******************************* Execute in the browser:
 
@@ -105,34 +144,16 @@ socket.send("BE#$42,solo,name,1000")
 console.log("************* Worker is", Worker);
 worker_OO = new Worker('worker_OO.js');
 
-/* worker_OO.onmessage = e => {
- console.log("In worker_OO.onmessage. e is", e); 
- console.log("In worker_OO.onmessage. e.data is", e.data); 
-M = M + 1;
-Monad(e.data);
-if (M === 2) {
-  M = -1;
-}
-} */
-
 worker_OO.onmessage = e => { 
   var data0 = e.data[0];
   var data1 = e.data[1];
-  console.log("e is", e);
-  console.log("e.data[0] is", e.data[0]);
-  console.log("e.data[1] is", e.data[1]);
- /* M+=1;
-  O["b"+M] = e.data[1]; 
-if (e.data[1].length > 1)  O["d" + M] = `The prime factors of ${data0} are ${data1}.` 
-else O["d" + M] = `${e.data[0]} is a prime number.`;
-if (M === 2) M = -1;  */
-if (e.data[1].length > 1)  mon("d", `The prime factors of ${data0} are ${data1}.`) 
-else mon("d", `${e.data[0]} is a prime number.`);
+  if (e.data[1].length > 1)  mon("d", `The prime factors of ${data0} are ${data1}.`) 
+  else mon("d", `${e.data[0]} is a prime number.`);
+  mon("b", e.data[1]);
 }
-
-var oa = O.b0.reduce((a,b) => a*b) === O.c0
-var ob = O.b1.reduce((a,b) => a*b) === O.c1
-var oc = O.b2.reduce((a,b) => a*b) === O.c2
+// var oa = O.b0.reduce((a,b) => a*b) === O.c0
+// var ob = O.b1.reduce((a,b) => a*b) === O.c1
+// var oc = O.b2.reduce((a,b) => a*b) === O.c2
 
 var candle = `socket.send(\"BE#$42,solo,name,10000\")    
 socket.send('\BE#$42,solo,name,100000\")    
@@ -167,7 +188,11 @@ button {
   }
 
 pre {font-size: 20px}
+
+p {text-indent: 3%}
+
 </style>
+
 <svelte:head>
 	<title>Async</title>
 </svelte:head>
@@ -196,11 +221,18 @@ Asynchronous Information Handling
 </button>
 
 
-<p> In this demonstration, each monad's array of computed values is preserved as an attribute of an object named O. Here's the definition of "Monad" used in this module:</p>
+<p> In this demonstration, Monad() returns a function run() that pins attributes "b", "c", and "d" on a global object named "O". The module is small, and O's only purpose is keep the browser display up-to-date.  Despite run()'s side effects on O being efficient, and despite the fact that no function in the tiny isolated module uses or updates O.b, O.c, or O.d, some might object on grounds that "best practices" prohibit the use of functions that modify global variables, and  also prohibit the use of functions that work by means of their side effects. Such thinking would be simplistic and misguided.   
+
+Here's the definition of "Monad" used in this module:</p>
+<pre>{car}</pre>
 
 <p> Messages are sent to the Haskell WebSockets server requesting pseudo-random numbers between 1 and the integer specified at the end of the request. On the server, randomR from the System.Random library produces a number that is sent to the browser with the prefix "BE#$42". Messages from the server are parsed in socket.onmessage. If the prefix is "BE#$42", the payload (a number) is sent to worker_OO, which sends back the number's prime decomposition.</p>
 <p> Messages from the web worker are processed in worker_OO.onmessage
 <p> When M === 2 the process is complete. M and N are set to -1 and lock is set to false, allowing another possible call to random() to call rand(). </p>
+
+
+
+<br>
 <br>
 <span> The code for this Svelte application is at </span>
 <a href = "https://github.com/dschalk/blog/" target = "_blank">GitHub repository</a>
