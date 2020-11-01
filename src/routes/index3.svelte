@@ -82,21 +82,35 @@ console.log("v1(e) is", v1(e));  // [3, 27, 54, 42, 4, 64] `
   .tao {margin-left: 3%;}
   em {color: darkgreen;}
 
+a {
+  color: rgb(70, 0, 128);
+}
+
+a:hover {
+  color: #FF0000;
+}
+
 p {
     font-size: 20px;
+}
+
+pre {
+    font-size: 20px;
+    color: darkred;
 }
 
 span {
     font-size: 20px;
 }
 </style>
-<div style = "font-family: Times New Roman;  text-align: center; font-size: 38px;" transition:fade>
+
+<div style = "font-family: Times New Roman;  text-align: center; color: #000000; font-size: 38px;" transition:fade>
 Introduction
 </div>
 <div>
 <br>
 <div Blass = bold>
-<p>This website is built on the <a href="https: //sapper.svelte.dev/">Sapper</a> framework, an extension of <a href="https://svelte.dev/">Svelte 3.</a> It's hosted on a Digital Ocean droplet which is supported by a Haskell WebSockets server on a separate droplet. </p>
+<p>This website is built on the <a href="https: //   sapper.svelte.dev/">Sapper</a> framework, an extension of <a href="https://svelte.dev/">Svelte 3.</a> It's hosted on a Digital Ocean droplet which is supported by a Haskell WebSockets server on a separate droplet. </p>
 <p>Svelte modules look a lot like plain, old-fashioned HTML pages, with JavaScript inside of script tags, CSS in style tags, and mostly standard HTML. Svelte enhancements of plain vanilla HTML facilitate reactivity and animation. They are few and the official tutorials make it convenient to start using them right away. </p>
 <p> The modules in this presentation are small and isolated from other modules, making them easy to understand and maintain. There are no compelling reasons to avoid mutations and side effects, or to impose explicit type constraints on functions. <p> 
 <p> As global spaces increase in size it becomes increasingly likely that reassigning global variables will eventually lead to bugs. Variables should be tucked safely inside of small or medium-sized functions, or else they should be immutable.</p>

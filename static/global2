@@ -10,7 +10,7 @@
     margin-right: auto;
     border-radius: 35px;
     background-color: #361B01;
-    color: #c3f8f8;
+    color: #d3ead5;
     margin-top: 20px;
     font-size: 18px;
     box-shadow: inset 0px 0px 20px 0px rgb(0,0,0);
@@ -25,17 +25,6 @@
   margin-right: auto;
   display: block;
   text-indent: 1.6%;
-  background-color: #361B01;
-}
-
-.left {
-   width: 40%;
-}
-
-.right {
-   width: 60%;
-   margin left:3%;
-   margin-right:3%;
 }
 
 .abs {
@@ -69,12 +58,6 @@
   width: 25%;
 }
 
-@media (min-width: 400px) {
-	body {
-		font-size: 16px;
-	}
-}
-
 .row_A {
   float: left;
   width: 10%;
@@ -95,18 +78,16 @@
 }
 
 a {
-  color: #eb93eb;
-}
-
-a:hover {
-  color: yellow;
+  color: #cc72f9;
 }
 
 .a2 {
   color: #BCBBFF;
 }
 
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
+a:hover {
+  color: #f7f700;
+}
 
 #wrapper {
   width: 500px;
@@ -127,7 +108,7 @@ a:hover {
 
 pre {
   margin-left: 26px;
-  color: rgb(86, 253, 211);
+  color: #aaddff;
 }
 
   p {
@@ -139,61 +120,16 @@ pre {
     padding-left: 2%;
   }
 
-.button {
-   margin-right: 3%;
-   background-color: #331903;
-   color: #ccccdd;
-   font-size: 17px;
-   padding: 3px 10px 3px 10px;
-}
-
-.button:hover {
-  color: #FFCC00;
-}
-
-
-  .but {
+  button {
     margin-left: 5%;
     background-color: #331903;
     border-width: 2px;
     border-color: #E8F7C1;
     border-radius: 10px;
     color: #00ffdd;
-    font-size: 22px;
-    -webkit-box-shadow: 0px 0px 15px 0px rgb(255, 215, 0);
-    box-shadow:         0px 0px 15px 0px rgb(255, 215, 0);
-    padding: 3px 10px 3px 10px;
-  }
-
-  .but:hover {
-    margin-left: 5%;
-    border-width: 2px;
-    border-radius: 10px;
     font-size: 24px;
     -webkit-box-shadow: 0px 0px 15px 0px rgb(255, 215, 0);
     box-shadow:         0px 0px 15px 0px rgb(255, 215, 0);
-    padding: 3px 10px 3px 10px;
-    color: #000000;
-    background-color: lightblue;
-    border-color: #0000AA;
-    border-radius: 10px;
-  }
-
-  .but:focus {
-    font-size: 24px;
-    color: #FFCCBB;
-  }
-
-
-  button {
-    margin-left: 5%;
-    background-color: #331903;
-    border-width: 2px;
-    border-color: #361B01;
-    border-radius: 10px;
-    color: #ffffcc;
-    font-size: 24px;
-    box-shadow: 0px 0px 5px 0px rgb(255, 215, 0);
     padding: 3px 10px 3px 10px;
   }
 
@@ -201,12 +137,25 @@ pre {
     margin-left: 5%;
     border-width: 2px;
     border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgb(255, 215, 0);
     box-shadow:         0px 0px 15px 0px rgb(255, 215, 0);
     padding: 3px 10px 3px 10px;
     color: #000000;
-    font-size: 22px;
     background-color: lightblue;
     border-color: #0000AA;
+    border-radius: 10px;
+  }
+
+  button:focus {
+    margin-left: 5%;
+    border-width: 0px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgb(255, 215, 0);
+    box-shadow:         0px 0px 15px 0px rgb(255, 215, 0);
+    padding: 3px 10px 3px 10px;
+    color: #000000;
+    background-color: lightblue;
+    border-color: #d3ead5;
     border-radius: 10px;
   }
 
@@ -222,7 +171,7 @@ pre {
 .icon {
     line-height: 1;
 
-label {
+label: {
     background-color: #331903;
     text-align: left;
     border-color: #331903;
@@ -262,18 +211,16 @@ label {
   margin-left: 3%;
   display: block;
   text-indent 1.6%;
-  background-color: #361B01;
 }
 
 .content {
-  width: 80%;
+  width: 50%;
   font-family: monospace;
   font-size: 22px;
   margin-left: 3%;
   margin-right: auto;
   display: block;
   text-indent 1.6%;
-  background-color: #361B01;
 }
 
 .large {

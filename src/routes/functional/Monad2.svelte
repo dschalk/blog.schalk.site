@@ -70,7 +70,6 @@ function Monad () {
           N1 = N1 + 1; 
           let v = (aa + N1); 
           O[v] = bb
-          console.log("************************O[v] is **********************",  O[v])
           }
         if (aa === "c") {
             N2 = N2 + 1; 
@@ -164,6 +163,14 @@ console.log ("O is", O);
 </script>
 
 <style>
+h3 {color: #B0B  }
+a {
+  color: #eb93eb;
+}
+
+a:hover {
+  color: #f7f700;
+}
 
 button {
     margin-left: 1%;
@@ -176,7 +183,7 @@ button {
     box-shadow: 0px 0px 12px 0px rgb(0, 255, 0);
     padding: 3px 5px 3px 5px;
     text-align: center;
-    width: 60%;
+    width: 100%;
   }
 
   button:hover {
@@ -198,7 +205,7 @@ p {text-indent: 3%}
 </svelte:head>
 
 <div style = "font-family: Times New Roman;  text-align: center; 
-color: #0000AA; font-size: 38px;" transition:fade>
+color: yellow; font-size: 38px;" transition:fade>
 Asynchronous Information Handling
 </div>
 <br>
@@ -211,23 +218,26 @@ Asynchronous Information Handling
 <div style="color:red">
 <div>{O.d0} </div><div> {O.d1}</div> <div> {O.d2}</div>
 </div>
-<div>{O.b0}.reduce((a,b)=>a*b) == {O.c0} is <span style = "color: purple">{O.b0.reduce((a,b)=>a*b) == O.c0}</span> </div>
-<div>{O.b1}.reduce((a,b)=>a*b) == {O.c1} is <span style = "color: purple">{O.b1.reduce((a,b)=>a*b) == O.c1}</span> </div>
-<div>{O.b2}.reduce((a,b)=>a*b) == {O.c2} is <span style = "color: purple">{O.b2.reduce((a,b)=>a*b) == O.c2}</span> </div>
+<div>{O.b0}.reduce((a,b)=>a*b) == {O.c0} is <span style = "color: red">{O.b0.reduce((a,b)=>a*b) == O.c0}</span> </div>
+<div>{O.b1}.reduce((a,b)=>a*b) == {O.c1} is <span style = "color: red">{O.b1.reduce((a,b)=>a*b) == O.c1}</span> </div>
+<div>{O.b2}.reduce((a,b)=>a*b) == {O.c2} is <span style = "color: red">{O.b2.reduce((a,b)=>a*b) == O.c2}</span> </div>
 <br>
 <span>Click this:</span>
+<br>
 <button on:click = {factors}>
 {candle}
 </button>
 
 
-<p> In this demonstration, Monad() returns a function run() that pins attributes "b", "c", and "d" on a global object named "O". The module is small, and O's only purpose is keep the browser display up-to-date.  Despite run()'s side effects on O being efficient, and despite the fact that no function in the tiny isolated module uses or updates O.b, O.c, or O.d, some might object on grounds that "best practices" prohibit the use of functions that modify global variables, and  also prohibit the use of functions that work by means of their side effects. Such thinking would be simplistic and misguided.   
+<p> In this demonstration, Monad() returns a function run() that returns a function f(). f() takes two arguments and calls run(a,b). run makes the assignment O[a1] = b, O[a2] =b, or O[a3] = b on the global object O, and returns f(). The cycle is repeated whenever f() encounters more arguments.  </p>
 
-Here's the definition of "Monad" used in this module:</p>
+<p> Functions that cause side effects during execution can cause hard-to-find bugs. There is, however, no danger of that occurring here. This module is small, run() is the only function that modifies O, and there are no functions in the script that fetch data from O. O exists for the sole purpose of keeping browser displays refreshed when data arrives from the WebSockets server and the Web Worker. Svelte's built-in reactivity keeps the HTML page in sync with O.  </p>
+
+<p>Here's the definition of "Monad" used in this module:</p>
 <pre>{car}</pre>
 
-<p> Messages are sent to the Haskell WebSockets server requesting pseudo-random numbers between 1 and the integer specified at the end of the request. On the server, randomR from the System.Random library produces a number that is sent to the browser with the prefix "BE#$42". Messages from the server are parsed in socket.onmessage. If the prefix is "BE#$42", the payload (a number) is sent to worker_OO, which sends back the number's prime decomposition.</p>
-<p> Messages from the web worker are processed in worker_OO.onmessage
+<p> Messages are sent to the Haskell WebSockets server requesting pseudo-random numbers between 1 and the integer specified at the end of the request. On the server, randomR from the System.Random library produces a number that is sent to the browser with the prefix "BE#$42". Messages from the server are parsed in socket.onmessage. If the prefix is "BE#$42", mon(p) executes, where p is the payload (a number) and mon is defined by "mon = Monad()". mon sends p to worker_OO, which sends back the prime decomposition of p.</p>
+<p> mon(m) then executes, where m is an array co from the web worker are processed in worker_OO.onmessag
 <p> When M === 2 the process is complete. M and N are set to -1 and lock is set to false, allowing another possible call to random() to call rand(). </p>
 
 

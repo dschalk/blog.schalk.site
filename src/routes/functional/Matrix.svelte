@@ -109,11 +109,12 @@ var html = `<button class = bu  id = 0 on:click = {() => sky([0, ARR[0]] )}>{ARR
 </script>
 <style>
 .bu {
-    width: 50px;
+    width: 58px;
     border-width: 0;
     color: #CC00CC;
     font-size: 30px;
-    background-color: white;
+    background-color: #361B01;
+    border-color: #361B01 ;
 }
 
 h2 {
@@ -122,10 +123,10 @@ h2 {
 }
 </style>
 
-<div style = "font-family: Times New Roman;  text-align: center; color: #0000AA; font-size: 38px;" transition:fade>
+<div style = "font-family: Times New Roman;  text-align: center; color: yellow; font-size: 38px;" transition:fade>
 Immutable Data Structures
 </div>
-<h2>Preserving records of historical state</h2>
+<h2>Preserving records of past states</h2>
 <br><br>
 <p>Click any two numbers below and they will change places. The BACK and FORWARD buttons traverse the history of those changes. </p>
 <div>index: {index}</div>
