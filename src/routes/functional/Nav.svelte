@@ -51,6 +51,7 @@
 <nav>
 	<ul>
 		<li><a aria-current="{segment === 'functional/' ? 'page' : undefined}" href="functional/">home</a></li>
+		<li><a aria-current="{segment === 'functional/Monad0' ? 'page' : undefined}" href="functional/Monad0">A Simple Monad</a></li>
 		<li><a aria-current="{segment === 'functional/Monad2' ? 'page' : undefined}" href="functional/Monad2">Async</a></li>
 		<li><a aria-current="{segment === 'functional/Monad3' ? 'page' : undefined}" href="functional/Monad3">Promises</a></li>
 		<li><a aria-current="{segment === 'functional/Matrix' ? 'page' : undefined}" href="functional/Matrix">Grid</a></li>
