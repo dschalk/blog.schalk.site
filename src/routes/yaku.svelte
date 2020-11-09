@@ -1,65 +1,48 @@
-<!-- saved from url=(0036)http://arcturus.su/wiki/List_of_yaku -->
-<html class="client-js" lang="en" dir="ltr"><style id="Force_Custom_Fonts" type="text/css">@font-face{font-style:normal;font-family:"Serif";src:local("DejaVu Sans")}@font-face{font-style:bolder;font-family:"Serif";src:local("DejaVu Sans")}@font-face{font-style:normal;font-family:"Serif";src:local("Serif");unicode-range:U+0-FF,U+2E80-9FFF,U+F900-FAFF,U+FE30-FE4F,U+20000-2FA1F}@font-face{font-style:bolder;font-family:"Serif";src:local("Serif");unicode-range:U+0-FF,U+2E80-9FFF,U+F900-FAFF,U+FE30-FE4F,U+20000-2FA1F}@font-face{font-style:normal;font-family:"Serif";src:local("DejaVu Sans");unicode-range:U+0-FF}@font-face{font-style:bolder;font-family:"Serif";src:local("DejaVu Sans");unicode-range:U+0-FF}:not(pre):not(code):not(textarea):not(tt):not(kbd):not(samp):not(var){font-family:"Serif"!important}pre,code,textarea,tt,kbd,samp,var{font-family:monospace!important}pre *,code *,textarea *,tt *,kbd *,samp *,var *{font-family:monospace!important}</style><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>List of yaku - Japanese mahjong wiki</title>
-<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
-<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"List_of_yaku","wgTitle":"List of yaku","wgCurRevisionId":21221,"wgRevisionId":21221,"wgArticleId":51,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Yaku","Scoring"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"List_of_yaku","wgRelevantArticleId":51,"wgRequestId":"cb3c5d76b56f3ab5e97459bb","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false}});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1prkd3w",function ( $, jQuery, require, module ) {
-mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
-
-});mw.loader.load(["mediawiki.page.startup","skins.vector.js"]);});</script>
-<link rel="stylesheet" href="./List of yaku - Japanese mahjong wiki_files/load.php">
-<script async="" src="./List of yaku - Japanese mahjong wiki_files/load(1).php"></script>
 <style>
-@media screen {
-	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
-@media print {
-	#toc.tochidden,.toctoggle{display:none}}
-.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba( 255,255,255,0.5 );border-radius:5px;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB9ElEQVR4AZWRA3AYURQArxrVHtW2bdu2bdu2zdi2bdu2bWxs7zeehZaw4f70kbs+zI3e/nWK+RWx3aOFlrL56Sy5SxrruG69hlv6OyK+mz+8KDSXdXembj0ispT7tjs4ZTIbpYBvxGSGKzZTeFrb7W/meN002swFs0U8ttpHTkF2BvCqWQrW35929bTsKm5Zb+SEwWwcY8wAngB9m7Z+d+rIPZ/npdy12M5p47n8dXsCYAf0qPy06eGMdktuDu9Qf+JmKl3SWM91qzVcN9tAbEYkwMaq0tyb1m/To5kP170el/BK8/qa6sJr70ydf+T/Uu5ab+Oo/lS0AkUBpIFWlZ9WPhxpse/PHO7YbOOczjL0vZV2lNxPPtG73dYXM+xvm2znrOl83tidoqCwMBgYXsPFB0on5S6pr+eK5TKuW67lgvaKvF8mL1dtfTL32FHxRdyx3cQpg7m4x9sCXKkTIzA4LDH44zWdzaUf71hv5rTG4uyzcusybxSX7aThbMQ8XgCYAp3rzTTQOiIh9PNlzY3FSuZxrzjme1Y7uGS6kjsWO4jPjM4FVjRZsvD4kO9XtTZzQn82NyzWc0B7AmZh6gA/hOYSGhfw9YbOVnarj+S7800AL2BIsxUAbWNToj7bhBuQmZcOsFdoKUC74rGheCwXmqAIQTc9jQcrADIAAAAASUVORK5CYII=);background-image:url(/mjw/resources/src/mediawiki.action/images/green-checkmark.cow?d94f1)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:#000;text-shadow:0 0.0625em 0 #fff;text-decoration:none;opacity:0.2;filter:alpha( opacity=20 )}.postedit-close:hover{color:#000;text-decoration:none;opacity:0.4;filter:alpha( opacity=40 )}
-.mw-collapsible-toggle{float:right;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}  .mw-content-ltr .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr .mw-collapsible-toggle{float:right} .mw-content-rtl .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl .mw-collapsible-toggle{float:left}.mw-customtoggle,.mw-collapsible-toggle{cursor:pointer} caption .mw-collapsible-toggle,.mw-content-ltr caption .mw-collapsible-toggle,.mw-content-rtl caption .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr caption .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl caption .mw-collapsible-toggle{float:none} li .mw-collapsible-toggle,.mw-content-ltr li .mw-collapsible-toggle,.mw-content-rtl li .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr li .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
-.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:solid 1px #aaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:solid 1px #aaa;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#4c59a6;color:#fff}.suggestions-special .special-label{color:#808080;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c0c0c0}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}</style><style>
-.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
-<link rel="stylesheet" href="./List of yaku - Japanese mahjong wiki_files/load(2).php">
-<meta name="generator" content="MediaWiki 1.28.0">
-<link rel="shortcut icon" href="http://arcturus.su/favicon.ico">
-<link rel="search" type="application/opensearchdescription+xml" href="http://arcturus.su/mjw/opensearch_desc.php" title="Japanese mahjong wiki (en)">
-<link rel="EditURI" type="application/rsd+xml" href="http://arcturus.su/mjw/api.php?action=rsd">
-<link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
-<link rel="alternate" type="application/atom+xml" title="Japanese mahjong wiki Atom feed" href="http://arcturus.su/mjw/index.php?title=Special:RecentChanges&amp;feed=atom">
-<script src="./List of yaku - Japanese mahjong wiki_files/load(3).php"></script></head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-List_of_yaku rootpage-List_of_yaku skin-vector action-view">		
 
+a {background-color: #361B01}
+td {background-color: #361B01}
+tr {background-color: #361B01}
+table {
+	background-color: #361B01;
+    font-size: 22px;
+} 
+
+</style>
+<!-- <html lang="en">
+<body> -->
+<h3>From http://arcturus.su/wiki/List_of_yaku</h3>
 <h2><span class="mw-headline" id="One_han_closed_only">One han closed only</span></h2>
 <table class="wikitable" width="100%" id="Menzenchin_tsumohou">
 
 
-<tbody><tr>
 <td width="25%" valign="top"> <b><a href="http://arcturus.su/wiki/Menzenchin_tsumohou" title="Menzenchin tsumohou">Menzenchin tsumohou</a></b>
 <dl><dd> <span lang="ja">「門前清自摸和」</span></dd>
 <dd> Closed only</dd>
 <dd> </dd></dl>
 </td>
 <td width="75%">This yaku may apply to any closed hand.  Any player who draws a winning tile with a closed hand is awarded this yaku.
-</td></tr>
+</td>
 <tr style="background:#AFCDFC">
 <td align="center">
 </td>
 <td colspan="2">
-</td></tr></tbody></table>
+</td></tr></table>
 <table class="wikitable" width="100%" id="Riichi">
 
-<tbody><tr>
 <td width="25%" valign="top"> <b><a href="http://arcturus.su/wiki/Riichi" title="Riichi">Riichi</a></b>
 <dl><dd> <span lang="ja">「立直」</span></dd>
 <dd> Closed only</dd>
 <dd> </dd></dl>
 </td>
 <td width="75%">This is a special yaku applied to closed tenpai hands, which requires the player to make a declaration and "wager".
-</td></tr>
+</td>
 <tr style="background:#AFCDFC">
 <td align="center"><a href="http://arcturus.su/wiki/Riichi/Replays" title="Riichi/Replays">Replays</a>
 </td>
 <td colspan="2">
-</td></tr></tbody></table>
+</td></tr></table>
 <table class="wikitable" width="100%" id="Ippatsu">
 
 <tbody><tr>
@@ -596,8 +579,7 @@ mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","cs
 </td>
 <td colspan="2">
 </td></tr></tbody></table>
-<p><br>
-</p>
-</body>
-</html>
+<br><br>
+<a href="http://arcturus.su/wiki/Fu#Example:_1_han_110_fu">Link to fu</a>	
+
 

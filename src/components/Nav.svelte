@@ -52,12 +52,13 @@
 <nav>
 	<ul>
 		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'yaku' ? 'page' : undefined}" href="yaku">yaku</a></li> 
+
 
 	<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
 	<!--	<li><a rel=prefetch aria-current="{segment === 'cattle' ? 'page' : undefined}" href="cattle">cattle</a></li> -->
 		<li><a rel=prefetch aria-current="{segment === 'functional' ? 'page' : undefined}" href="functional">Functional_JavaScript</a></li>
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
+		<li><a aria-current="{segment === 'yaku' ? 'page' : undefined}" href="yaku">yaku</a></li> 
+		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">Sapper_posts</a></li>
 	</ul>
 </nav>
