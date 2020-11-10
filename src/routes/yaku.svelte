@@ -581,5 +581,7 @@ table {
 </td></tr></tbody></table>
 <br><br>
 <a href="http://arcturus.su/wiki/Fu#Example:_1_han_110_fu">Link to fu</a>	
+<br><br>
+<a href="http://arcturus.su/wiki/Riichi">Link to riichi</a>	
 
 
