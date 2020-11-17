@@ -580,8 +580,22 @@ table {
 <td colspan="2">
 </td></tr></tbody></table>
 <br><br>
-<a href="http://arcturus.su/wiki/Fu#Example:_1_han_110_fu">Link to fu</a>	
-<br><br>
+<a href="http://arcturus.su/">http://arcturus.su/</a> <span> is the most authoritative and comprehensive site I have found. The above list of yaku and the following two links are examples of its excellent content:</span>	
+<a href="http://arcturus.su/wiki/Fu#Example:_1_han_110_fu">Link to fu </a>	
+<span> and </span>
 <a href="http://arcturus.su/wiki/Riichi">Link to riichi</a>	
+<br><br>
+<span> Daina Chiba's strategy guide is an excellent resource. Here a link to the PDF version: </span><a href="https://ooyamaneko.net/download/mahjong/riichi/Daina_Chiba_-_Riichi_Book_1_en.pdf">Riichi Book 1</a>	
+<br><br>
+
+<span> This video can help beginners get started:</span>
+<a href="https://www.youtube.com/playlist?list=PLNY6IisfUYCaXBORIIFiAmcvOAU3ve0Pl">Playlist of elementary ideas and a little more </a>	
+<br><br>
+<span> This three-hour video strives to be comprehensive: </span>>
+<a href="https://www.youtube.com/watch?v=hlnC2rgIPrc">How to Play Japanese Mahjong</a>	
+<br><br>
+<span> Computer programmers will appreciate this site: </span><a href="https://github.com/MahjongRepository">Mahjong Repository</a>	
+<br><br>
+<span>This might interest beginners:</span> <a href="https://www.twitch.tv/mr_mortified/videos">Link to mr_mortified's published videos.</a>	
 
 
