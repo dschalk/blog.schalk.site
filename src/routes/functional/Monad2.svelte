@@ -107,9 +107,9 @@ if (v[0] === "BE#$42") {
 /*Q = Q + 1;
 O["c"+Q] = v[3]
 if (Q === 2) Q = -1; */
-mon("c", v[3]) 
+  mon("c", v[3]) 
 // worker_OO.postMessage([v[3]])
-}
+  }
 }
 
 login();

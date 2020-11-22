@@ -94,12 +94,21 @@
   clear: both;
 }
 
-a {
+/* a {
   color: #eb93eb;
 }
 
 a:hover {
   color: yellow;
+}  */
+
+a {
+  background-color: #361B01;
+  color: #ee9a54;
+  }
+
+  a:hover {
+  color: #86f1e9;
 }
 
 .a2 {

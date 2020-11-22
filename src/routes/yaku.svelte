@@ -1,18 +1,26 @@
 
 <style>
 
-a {background-color: #361B01}
+a {
+    background-color: #361B01;
+    color: #ee9a54;
+    }
+
+    a:hover {
+    color: #86f1e9;
+}
+
 td {background-color: #361B01}
 tr {background-color: #361B01}
 table {
 	background-color: #361B01;
     font-size: 22px;
 } 
-
 </style>
 <!-- <html lang="en">
 <body> -->
 <h3>From http://arcturus.su/wiki/List_of_yaku</h3>
+<h2 style="color: #00cccc">Click Title or Replay links for detailed information.</h2>
 <h2><span class="mw-headline" id="One_han_closed_only">One han closed only</span></h2>
 <table class="wikitable" width="100%" id="Menzenchin_tsumohou">
 
