@@ -46,16 +46,16 @@
 		padding: 1em 0.5em;
 		display: block;
 	}
-
 </style>
 
 <nav>
 	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'functional' ? 'page' : undefined}" href="functional">Functional_JavaScript</a></li>
-		<li><a aria-current="{segment === 'mahjong' ? 'page' : undefined}" href="mahjong">Mahjong</a></li>
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">Sapper_posts</a></li>
-		<li><a aria-current="{segment === 'Waits' ? 'page' : undefined}" href=".">Waits</a></li>
+		<li><a aria-current="{segment === 'functional/Yaku' ? 'page' : undefined}" href="functional/Yaku">A Simple Monad</a></li>
+		<li><a aria-current="{segment === 'functional/Tiles' ? 'page' : undefined}" href="functional/Tiles">Async</a></li>
+		<li><a aria-current="{segment === 'functional/D&D' ? 'page' : undefined}" href="functional/D&D">D&D</a></li>
+
+		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
+		     the blog data when we hover over the link or tap it on a touchscreen -->
+
 	</ul>
-</nav>		
-	
+</nav>

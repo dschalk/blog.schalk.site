@@ -165,7 +165,7 @@ Immutable Data Structures
 <!-- <h2>Preserving records of past states</h2> -->
 
 <br><br>
-<p>Double click the tile you wish to discard.</p>
+<p>The tile on the right is your draw. To keep it, double click on the tile you wish to discard. Double click on the drawn tile in order to discard it and draw another. </p>
 <p>You can make any two mahjong tiles change places by clicking one and then the other.</p>
 <div>index: {index}</div>
 <div>draws: {draws}</div>
