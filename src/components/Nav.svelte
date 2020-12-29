@@ -51,11 +51,11 @@
 
 <nav>
 	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
+		<li><a aria-current="{segment === undefined ? 'pagev' : undefined}" href=".">home</a></li>
 		<li><a aria-current="{segment === 'functional' ? 'page' : undefined}" href="functional">Functional_JavaScript</a></li>
 		<li><a aria-current="{segment === 'mahjong' ? 'page' : undefined}" href="mahjong">Mahjong</a></li>
 		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">Sapper_posts</a></li>
-		<li><a aria-current="{segment === 'Waits' ? 'page' : undefined}" href=".">Waits</a></li>
+		<li><a aria-current="{segment === 'Waits' ? 'page' : undefined}" href="Waits">Waits</a></li>
 	</ul>
 </nav>		
 	

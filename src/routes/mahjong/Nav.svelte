@@ -50,9 +50,9 @@
 
 <nav>
 	<ul>
-		<li><a aria-current="{segment === 'functional/Yaku' ? 'page' : undefined}" href="functional/Yaku">A Simple Monad</a></li>
-		<li><a aria-current="{segment === 'functional/Tiles' ? 'page' : undefined}" href="functional/Tiles">Async</a></li>
-		<li><a aria-current="{segment === 'functional/D&D' ? 'page' : undefined}" href="functional/D&D">D&D</a></li>
+		<li><a aria-current="{segment === 'mahjong/' ? 'page' : undefined}" href="mahjong/">home</a></li>
+		<li><a aria-current="{segment === 'mahjong/Yaku' ? 'page' : undefined}" href="mahjong/Yaku">Yaku</a></li>
+		<li><a aria-current="{segment === 'mahjong/Waits' ? 'page' : undefined}" href="mahjong/Yaku">Waits</a></li>
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->

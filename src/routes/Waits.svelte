@@ -117,13 +117,16 @@
                 ARR[i] = ARR[i+1]
             }
             ARR[c] = b;
+            if (a === 13 || c === 13) getR();
         }
         else if (a > c) {
             for (let i = a; i > c; i-=1) {
                 ARR[i] = ARR[i-1]
             }
             ARR[c] = b;
+            if (a === 13 || c === 13) getR();
         }
+
         ARCHIVE.splice(ARCHIVE.length, 0, ARR.slice());
         ARCHIVE = ARCHIVE;
         ar69 = [];
@@ -151,7 +154,7 @@
     
     function getR() {
         draws+=1
-        B = shuffle(B);
+        // B = shuffle(B);
         ARR[13] = B.splice(0,1)[0];
         ar69 = [];
         index = index+=1;
