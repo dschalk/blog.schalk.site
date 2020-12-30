@@ -17,6 +17,10 @@
     padding: 3px 0px 3px 3px;
   }
 
+img {
+  background-color: #FFFFFF;
+}  
+
 #content {
   width: 50%;
   font-family: monospace;

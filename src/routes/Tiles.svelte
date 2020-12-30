@@ -68,20 +68,16 @@
     
     var A = Array.from(Array(136).keys())
     var B = A.slice();
-    var B = shuffle(B);
     let items = [
         {id: 1, name: "item1"},
         {id: 2, name: "item2"},
         {id: 3, name: "item3"},
         {id: 4, name: "item4"}
     ];
-    // var ARR = [1,2,3,4,5,6,7,8,9,10,11,12,13,15]
     var ARR = B.splice(0,14);
     var ARCHIVE = [ARR];
     var index = -1;
     console.log("ARR is", ARR);
-    function inc () {index = index + 1; return index};
-    $: inc();
     function shuf() {
         B = A.slice();
         B = shuffle(B);
@@ -154,7 +150,7 @@
     
     function getR() {
         draws+=1
-        // B = shuffle(B);
+        B = shuffle(B);
         ARR[13] = B.splice(0,1)[0];
         ar69 = [];
         index = index+=1;
@@ -164,12 +160,9 @@
         return index;
     }
     
-    shuf();
     console.log("ARR is", ARR);
 
-
     </script>
-
 
     <style>
     
