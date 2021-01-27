@@ -68,25 +68,26 @@
     
     var A = Array.from(Array(136).keys())
     var B = A.slice();
-    var B = shuffle(B);
-    let items = [
-        {id: 1, name: "item1"},
-        {id: 2, name: "item2"},
-        {id: 3, name: "item3"},
-        {id: 4, name: "item4"}
-    ];
-    // var ARR = [1,2,3,4,5,6,7,8,9,10,11,12,13,15]
-    var ARR = B.splice(0,14);
-    var ARCHIVE = [ARR];
+    B = shuffle(B);
+    var ARR = B.splice(0,14);   
+    var ARCHIVE = [ARR.slice()];
+    var ar69 = [];
+    var argo;
+    $:   argo = () => {return ar69.slice()};
+    ar69 = ar69;
     let index = 0;
     console.log("ARR is", ARR);
+
+
     function shuf() {
-        B = A.slice();
+        B = A.slice()
         B = shuffle(B);
         ARR = B.splice(0,14);
+        ARCHIVE = [ARR];
         index = 0;
         draws = 0;
-        ARCHIVE = [ARR.slice()]
+        ar69 = [];
+        ARCHIVE = [ARR].slice();
         return ARR; 
     }
 
@@ -115,74 +116,68 @@
                 ARR[i] = ARR[i+1]
             }
             ARR[c] = b;
-            if (a === 13 || c === 13) getR();
-            else index = index + 1;
+            index = index + 1;
+            ar69 = []; 
+        ARCHIVE.splice(ARCHIVE.length, 0, ARR.slice());
+        ARCHIVE = ARCHIVE.slice();
+        console.log("ARCHIVE is", ARCHIVE.slice());
         }
         else if (a > c) {
             for (let i = a; i > c; i-=1) {
                 ARR[i] = ARR[i-1]
             }
             ARR[c] = b;
-            if (a === 13 || c === 13) getR();
-            else index = index + 1;
-        }
-
+            index = index + 1;
+            ar69 = ar69;
         ARCHIVE.splice(ARCHIVE.length, 0, ARR.slice());
-        ARCHIVE = ARCHIVE;
-        ar69 = [];
-        // if (a === 13 || c === 13) getR();
-    } 
-    
+        ARCHIVE = ARCHIVE.slice();
+        console.log("ARCHIVE is", ARCHIVE.slice());
+        setTimeout(() => ar69 = [], 300);
+        }
+        else if (a === c) {
+            // setTimeout(() => ar69 = [], 300);
+            getR();
+        } 
+    }   
     var ar69 = [];
     
     function sky (a) {
-            ar69.push(a[0])
-            ar69.push(a[1])
-            if (ar69.length === 4) {
+        if (ar69.length === 0) ar69 = a
+        else if (ar69.length === 2) {
+                ar69 = ar69.concat(a);
                 if (ar69[0] === 13 && ar69[2] === 13) {
-                    $: index = getR();
+                    index = getR();
                 }
-    
                 else if(ar69[0] === ar69[2]) {
                     ARR[ar69[0]] = ARR[13];
-                    $: index = getR();
+                    index = getR();
                 }
-                else sw(ar69);
-        console.log("ARCHIVE is", ARCHIVE);
+                else if (ar69[0] < 13 && ar69[2] < 13) sw(ar69)
+                else { console.log("FUBAR"); shuf() }
         }
      };
     
     function getR() {
         draws+=1
-        // B = shuffle(B);
-        ARR[13] = B.splice(0,1)[0];
-        ar69 = [];
         index = index+=1;
-        ARCHIVE.splice(ARCHIVE.length, 0, ARR.slice());
-        ARCHIVE = ARCHIVE;
+        ar69 = [];
+        ARR[13] = B.splice(0,1)[0];
+        ARR = ARR;
+        ARCHIVE.push(ARR.slice());
+        ARCHIVE = JSON.parse(JSON.stringify(ARCHIVE)); 
         console.log("ARCHIVE is", ARCHIVE);
         return index;
     }
     
-    shuf();
-    console.log("ARR is", ARR);
-
+    // shuf();
+    ar69 = ar69;
 
     </script>
 
 
     <style>
     
-    h2 {
-        color: purple;
-        text-align: center;
-    }
-    
-    img {
-        opacity: 1;
-        background-color:#FFFFFF
-    }
-    
+    img {background-color: white;}
     </style>
     
     
@@ -191,14 +186,9 @@
     </div>
     <!-- <h2>Preserving records of past states</h2> -->
     <br><br>
-    <p>The tile on the right is your draw. To keep it, double click on the tile you wish to discard or click the tile to discard and the drawn tile you wish to keep. To discard the drawn undefined undefined Tiles, click draw or double click on it</p>
-    <p> To organize your hand, click on a tile and then click where you want it to be placed.</p>
-    <br>
-
-    <div>index: {index}</div>
-    <div>draws: {draws}</div>
-    <div>Current tile indeces: {ARR}</div>
-    <br><br>    
+    <p>The tile on the right is your draw. To keep it, double click on the tile you wish to discard. To discard the drawn tile, click the "Draw" button or double click on the drawn tile.</p>
+    <p> To organize your hand, click on a tile and then click the tile located where you want to place it. This is not the way to place the drawn tile in your hand. Double clicking the tile you wish to discard and clicking the "Draw" button are the only ways to do it. </p> 
+    <br>    
     <div style = "color: #FF0000; text-align: center">
     <span   id = 0 on:click = {() => sky([0, ARR[0]] )}><img src={xyz[ARR[0]]}></span>
     <span   id = 1 on:click = {() => sky([1, ARR[1]] )}><img src={xyz[ARR[1]]}></span>
@@ -221,15 +211,19 @@
     <br><br><br>
     <button on:click = {shuf}>SHUFFLE</button>
     <button on:click={getR}>Draw</button> 
-    <br><br>
-    <h2>{ar69}</h2>
     <button on:click = {back}>BACK</button>
     <button on:click={forward}>Forward</button> 
     
+    <br><br>
+
+    <div>index: {index}</div>
+    <div>draws: {draws}</div>
+    <div>Current tile indeces: {ARR}</div>
+    <div>ar69: {argo()}</div>
     <br><br><br>
+    <p>Attempting to switch positions between a tile in you hand and the one that you drew erases the history and presents a fresh hand of 13 tiles.</p>
     
     
-    <p>Clicking a button sends its id and value to the function "sky". The next time a button is clicked, ar69 in sky() gets a third and fourth value. sky() forwards the ids and button values to sw() which switches the clicked buttons' values, saves a clone of the resulting array in the master array of arrays (ARCHIVE), increments index, and clears array ar69, preparing sky() for another round of data. </p>
     
     
     
