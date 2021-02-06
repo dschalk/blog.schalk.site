@@ -1,3 +1,18 @@
+schalk.site has been taken down. This project is no longer online at blog.schalk.site. The new location is https://schalk.net.
+
+Rather than present my iconoclastic thoughts on developing websites here, I direct your attention to the interactive presentation at https://schalk.net. 
+
+******************************************************************************************************
+******************************************************************************************************
+INFORMATION ABOUT SAPPER
+******************************************************************************************************
+
+What's the deal with SvelteKit?
+We're rethinking how to build Svelte apps. Here's what you need to know
+THU NOV 05 2020 -- [https://svelte.dev/blog/whats-the-deal-with-sveltekit](https://svelte.dev/blog/whats-the-deal-with-sveltekit)
+
+Sapper is destined to be replaced. Until then:
+
 # sapper-template
 
 The default template for setting up a [Sapper](https://github.com/sveltejs/sapper) project. Can use either Rollup or webpack as bundler.
