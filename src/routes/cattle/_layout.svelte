@@ -1,3 +1,9 @@
+
+
+<svelte:head>
+	<title>JavaScript Monads for Asynchronous Functionality and Time Travel.</title>
+</svelte:head>
+
 <script>
 	import Nav from './Nav.svelte';
 

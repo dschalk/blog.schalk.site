@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>JavaScript Monadse</title>
+</svelte:head>
+
 <script>
 	export let segment;
 </script>
@@ -55,8 +59,8 @@
 		<!--<li><a aria-current="{segment === 'functional/Monad2' ? 'page' : undefined}" href="functional/Monad2">Async</a></li> -->
 		<li><a aria-current="{segment === 'functional/Monad3' ? 'page' : undefined}" href="functional/Monad3">Promises</a></li>
 		<!-- <li><a aria-current="{segment === 'functional/Matrix' ? 'page' : undefined}" href="functional/Matrix">Grid</a></li> -->
-		<li><a aria-current="{segment === 'functional/D&D' ? 'page' : undefined}" href="functional/D&D">D&D</a></li>
-
+		<li><a aria-current="{segment === 'functional/Drag_and_Drop_Example' ? 'page' : undefined}" href="functional/Drag_and_Drop_Example">Drag and Drop Example</a></li>
+		<li><a aria-current="{segment === 'functional/time' ? 'page' : undefined}" href="functional/time">Traversing Prior States</a></li>
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
 

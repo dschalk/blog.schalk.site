@@ -41,7 +41,8 @@ import { now } from "svelte/internal";
 </style>
 
 <svelte:head>
-	<title>David's Blog</title>
+	<title>Functional Programming Best Practices when using Svelte JavaScript.</title>
+	<meta>
 </svelte:head>
 
 <p> There's more to Come. For now, I hope web developers will take a look at the "Functional JavaScript" section. You're likely to be surprised. I was, when I discovered that some of the usual coding rules don't need to be obeyed in small isolated modules. That left me free to write more concise and transparent JavaScript for the Web. </p>

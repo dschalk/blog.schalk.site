@@ -1,4 +1,7 @@
-Basic Example:
+<svelte:head>
+	<title>Drag and Drop Example</title>
+</svelte:head>
+
 <script>
     import {flip} from "svelte/animate";
     import {dndzone} from "svelte-dnd-action";

@@ -1,6 +1,9 @@
 
-<style>
+<svelte:head>
+	<title>Mahjong Yaku.</title>
+</svelte:head>d
 
+<style>
 a {
     background-color: #361B01;
     color: #ee9a54;

@@ -2,6 +2,11 @@
 	export let segment;
 </script>
 
+<svelte:head>
+	<title>Monads for Asynchronous Functionality and Time Travel.</title>
+	<meta>
+</svelte:head>
+
 <style>
 	nav {
 		border-bottom: 1px solid rgba(255,62,0,0.1);
@@ -52,7 +57,8 @@
 	<ul>
 		<li><a aria-current="{segment === 'undefined' ? 'page' : undefined}" href="cattle/">home</a></li>
 		<li><a aria-current="{segment === 'cattle/yaku' ? 'page' : undefined}" href="cattle/yaku">Yaku</a></li>
-		<li><a aria-current="{segment === 'cattle/waits' ? 'page' : undefined}" href="cattle/waits">Waits</a></li>
+		<li><a aria-current="{segment === 'cattle/terms' ? 'page' : undefined}" href="cattle/terms">Japanese Terms</a></li>
+		<li><a aria-current="{segment === 'cattle/time' ? 'page' : undefined}" href="cattle/time">Set Up Five Blocks</a></li>
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
